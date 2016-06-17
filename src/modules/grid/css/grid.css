@@ -1,0 +1,8 @@
+
+table.ui-grid-tree>tbody>tr>td{
+    border-bottom:0;
+    border-top:0;
+}
+.ui-tree-icon{
+    margin: 0 8px;
+}

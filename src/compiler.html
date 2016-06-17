@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        html,body{
+            height:100%;
+        }
+        .ly-full{
+            height:100%;
+            margin-bottom:-15px !important;
+        }
+        .ui-comps{
+            outline:1px solid #fabe00;
+        }
+        .ui-sortable-placeholder{
+            outline:2px dotted darkseagreen;
+            visibility: visible !important;
+        }
+        *{
+            font-family: "微软雅黑";
+        }
+    </style>
+
+    <link rel="stylesheet" href="../dist/style.css">
+    <title>PageCreator Demo</title>
+</head>
+<body style-require="bootstrap" class="style-require">
+
+<header></header>
+<div class="container-fluid ">
+    <textarea id="json" style="width:100%" rows="10">[{"type":"layout","args":[12],"sub":[[{"type":"form","args":[null],"sub":[[{"type":"input","args":[null],"sub":[],"ID":"input2","param":{"label":"用户名","name":"username"}}]],"ID":"form1","param":{"url":"a.json","method":"get","type":"ajax","validate":"{\"username\":[{\"rule\":\"require\",\"message\":\"要填写啊亲\"}]}"}}]]},{"type":"button","args":[null],"sub":[],"ID":"","param":{"code-onclick":"API.get('form1').submit();\nAPI.alert(API.get('input2').val())"}}]
+    </textarea>
+</div>
+<button class="btn btn-primary" id="show">show</button>
+<button class="btn btn-primary" id="compile">compile</button>
+<div id="view" class="container-fluid">
+
+</div>
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.js"></script>
+<script src="../dist/view.js"></script>
+</body>
+</html>

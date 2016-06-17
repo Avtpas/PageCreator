@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://dev.dianyadian.net/dcr/seed.js" charset="utf-8"></script>
+
+    <style>
+        .ly-full{
+            height:100%;
+            margin-bottom:-15px !important;
+        }
+        .ui-comps{
+            border:1px solid #fabe00;
+        }
+        *{
+            font-family: "微软雅黑";
+        }
+    </style>
+
+    <title>PageCreator Demo</title>
+</head>
+<body style-require="bootstrap" class="style-require">
+    <hr/>
+<header >
+    <input type="text" class="form-control" id="header" />
+</header>
+<hr/>
+<div class="container" id="view">
+
+</div>
+<script>
+    'use strict'
+    use(['jquery','page-creator','jquery-ui','dialog','json'],function(m){
+
+        var $ = m['jquery'];
+        var $view = $("#view")
+        var creator = m['page-creator'].create($view);
+        var json = m['json'];
+        $(function(){
+            var ready = creator.ready(function(elements,view){
+                $("#header").blur(function(){
+                    var $this = $(this);
+                    $this.val(json.stringify(json.parse($this.val())));
+                    creator.init(json.parse($this.val()),"view");
+                })
+            })
+        })
+    })
+</script>
+</body>
+</html>

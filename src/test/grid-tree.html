@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html,body{
+            height:100%;
+        }
+        *{
+            font-family: "微软雅黑";
+        }
+
+        table.ui-grid-tree>tbody>tr>td{
+            border-bottom:0;
+            border-top:0;
+        }
+        .ui-tree-icon{
+            margin: 0 8px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../../src/assets/css/style.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <title>PageCreator Test Grid-Tree</title>
+</head>
+<body style-require="bootstrap" class="style-require">
+
+<div class="container-fluid ">
+    <table class="table table-hover table-condensed table-bordered ui-grid-tree">
+        <thead >
+            <tr>
+                <th style="width:1rem"><input title="全选" type="checkbox"></th>
+                <th>树结构</th>
+                <th>column1</th>
+                <th>column2</th>
+                <th>column3</th>
+                <th>column4</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input title="选择" type="checkbox"></td>
+            <td><span class="glyphicon glyphicon glyphicon-triangle-bottom text-primary ui-tree-icon"></span>根目录</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td><input title="选择" type="checkbox"></td>
+            <td>
+                <span class=" text-primary ui-tree-icon"></span>
+                <span class="glyphicon glyphicon glyphicon-triangle-bottom text-primary ui-tree-icon"></span>一级目录
+            </td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td><input title="选择" type="checkbox"></td>
+            <td>
+                <span class=" text-primary ui-tree-icon"></span>
+                <span class=" text-primary ui-tree-icon"></span>
+                <span class="glyphicon glyphicon glyphicon-triangle-right text-primary ui-tree-icon"></span>二级目录
+            </td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td><input title="选择" type="checkbox"></td>
+            <td>
+                <span class=" text-primary ui-tree-icon"></span>
+                <span class=" text-primary ui-tree-icon"></span>
+                <span class="glyphicon glyphicon glyphicon-triangle-right text-primary ui-tree-icon"></span>二级目录
+            </td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td><input title="选择" type="checkbox"></td>
+            <td><span class="glyphicon glyphicon glyphicon-triangle-right text-primary ui-tree-icon"></span>根目录</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td><input title="选择" type="checkbox"></td>
+            <td><span class="glyphicon glyphicon glyphicon-triangle-right text-primary ui-tree-icon"></span>根目录</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr><tr>
+            <td><input title="选择" type="checkbox"></td>
+            <td><span class="glyphicon glyphicon glyphicon-triangle-right text-primary ui-tree-icon"></span>根目录</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+<script src="../jquery.min.js"></script>
+</body>
+</html>

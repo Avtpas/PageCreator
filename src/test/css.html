@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:10px">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html,body{
+            height:100%;
+        }
+        *{
+            font-family: "微软雅黑";
+            font-size:100%;
+        }
+
+
+        .cortana{
+            position:relative;
+            width:12rem;
+            height:8rem;
+            border:2px solid red;
+            border-radius: 10rem 10rem 12rem 12rem;
+        }
+        .cortana:before,.cortana:after{
+            content:" ";
+            width:2rem;
+            height:2rem;
+            top:3rem;
+            position:absolute;
+            background-color: #00b3ee;
+        }
+        .cortana:after{
+            left:2rem;
+            border-radius: 1rem 1.5rem;
+        }
+        .cortana:before{
+            right:2rem;
+            border-radius: 2rem 1.5rem;
+        }
+
+        @keyframes shake {
+
+        }
+        @keyframes blink {
+            
+        }
+    </style>
+    <link rel="stylesheet" href="prism/prism.css">
+    <title>PageCreator Test css</title>
+
+</head>
+<body style="margin:0 auto">
+<div class="cortana">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>列头文字</th>
+                <th>对其方式</th>
+                <th>数据源</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">
+                    <a class='btn-link'>添加列</a>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+</div>
+<script src="../jquery.min.js"></script>
+<script src="prism/prism.js"></script>
+<script>
+$(function(){
+
+
+})
+</script>
+</body>
+</html>

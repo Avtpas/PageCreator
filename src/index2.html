@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html,body{
+            height:100%;
+        }
+        .ly-full{
+            height:100%;
+            margin-bottom:-15px !important;
+        }
+
+        *{
+            font-family: "微软雅黑";
+        }
+    </style>
+
+    <link rel="stylesheet" href="../dist/style.css">
+    <link rel="stylesheet" href="assets/prism/prism.css">
+    <title>PageCreator</title>
+</head>
+<body style-require="bootstrap" class="style-require">
+
+<header></header>
+<div class="container-fluid ly-full">
+    <div class="row ly-full">
+        <div class="col-lg-3 ly-full">
+            <div class="ly-full panel panel-info">
+                <div class="panel-heading">Components</div>
+                <div class="panel-body">
+                    <div class="panel-group" id="accordion1" role="tablist">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse1_1">
+                                        Layout
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1_1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="layout" data-args="12">100%布局</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="layout"  data-args="6,6">6-6</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="layout"  data-args="4,4,4">4-4-4</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="layout"  data-args="4,8">4-8</a>
+                                    </div>
+                                    <div class="col-xs-12 row">
+                                        <div class="col-xs-4"><input type="text" class="form-control" id="layout_args"></div>
+                                        <div class="col-xs-8"><a class="btn-link btn">自定义</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse_grid">
+                                        Grid
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse_grid" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="grid-tree" >Grid-Tree</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="data-table" >Data-Table</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="data-table" >Form-Table</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse1_2">
+                                        Form
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1_2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="form" >form</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="input" >input</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="button" >button</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="button-group" >button group</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="toolbar" >toolbar</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="tabs" >tabs</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="radio" >radio</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse1_3">
+                                        Others
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1_3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="separator" >分隔线</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn">超链接</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn">按钮</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn">图片</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 ly-full">
+            <div class="panel panel-info">
+                <div class="panel-heading">View
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="pc-border" value="dcr-page-creator-hasCompBorder"> 组件边界
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="pc-border" value="dcr-page-creator-hasContBorder"> 容器边界
+                    </label>
+                    <a class="btn-link btn pull-right fn-preview" >preview <i class="icon-double-angle-right"></i> </a>
+                    <a class="btn-link btn pull-right fn-compile" >compile <i class="icon-double-angle-right"></i> </a>
+                    <a class="btn-link btn pull-right fn-refresh" >refresh <i class="icon-double-angle-right"></i> </a>
+
+                </div>
+                <div class="panel-body dcr-page-creator-container" id="view" >
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 ly-full">
+            <div class="ly-full panel panel-info">
+                <div class="panel-heading">Configs</div>
+                <div class="ly-full panel-body">
+                    <form class="form-horizontal" >
+                        <div class="container-fluid">
+                            <h5>通用属性</h5>
+                            <hr/>
+                            <div class="row">
+                                <div class="container-fluid">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3">ID</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="Comp_Id"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5>具体属性</h5>
+                            <hr/>
+                            <div class="row" id="config"></div>
+                            <div class="row text-right"><a class="btn btn-primary fn-save">保存</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../dist/webpack-dev-server.js"></script>
+<script src="../dist/polyfill.js"></script>
+
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.js"></script>
+
+<script src="assets/prism/prism.js"></script>
+
+<script src="../dist/index.js"></script>
+</body>
+</html>

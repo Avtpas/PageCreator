@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html,body{
+            height:100%;
+        }
+        *{
+            font-family: "微软雅黑";
+        }
+        table.ui-grid-tree>tbody>tr>td{
+            border-bottom:0;
+            border-top:0;
+        }
+        .ui-tree-icon{
+            margin: 0 8px;
+        }
+    </style>
+    <link rel="stylesheet" href="../assets/prism/prism.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <title>PageCreator Show Code</title>
+
+</head>
+<body >
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6">
+            <pre class="container-fluid">
+                <code class="language-html" id="compiled_html"></code>
+            </pre>
+        </div>
+        <div class="col-sm-6">
+            <pre class="container-fluid">
+                <code class="language-javascript" id="compiled_js"></code>
+            </pre>
+        </div>
+    </div>
+</div>
+<script src="../jquery.min.js"></script>
+<script src="../assets/prism/prism.js"></script>
+<script>
+$(function(){
+    window.addEventListener("storage",function(e){
+        let key = e.key;
+        let value = e.newValue;
+//      var NoSpaceReg = /(^\s+)|(\s+$)/g;
+        switch(key){
+            case "Compiled_HTML":
+                $("#compiled_html").text("\r\n"+value);break;
+            case "Compiled_JS":
+                $("#compiled_js").text("\r\n"+value);break;
+            default:break;
+        }
+        Prism.highlightAll()
+    });
+
+    $("#compiled_html").text("\r\n"+localStorage.getItem("Compiled_HTML"));
+    $("#compiled_js").text("\r\n"+localStorage.getItem("Compiled_JS"));
+})
+</script>
+
+
+<script src="../../dist/webpack-dev-server.js"></script>
+
+<script src="http://localhost/polyfill.js"></script>
+</body>
+</html>

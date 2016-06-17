@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://dev.dianyadian.net/dcr/seed.js" charset="utf-8"></script>
+
+    <style>
+        html,body{
+            height:100%;
+        }
+        .ly-full{
+            height:100%;
+            margin-bottom:-15px !important;
+        }
+        .ui-comps{
+            border:1px solid #fabe00;
+        }
+        *{
+            font-family: "微软雅黑";
+        }
+    </style>
+
+
+    <title>PageCreator Demo</title>
+</head>
+<body style-require="bootstrap" class="style-require">
+
+<header></header>
+<div class="container-fluid ly-full">
+    <div class="row ly-full">
+        <div class="col-lg-3 ly-full">
+            <div class="ly-full panel panel-info">
+                <div class="panel-heading">Components</div>
+                <div class="panel-body">
+                    <div class="panel-group" id="accordion1" role="tablist">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse1_1">
+                                        Layout
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1_1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="layout" data-args="12">100%布局</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="layout"  data-args="6,6">6-6</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="layout"  data-args="4,4,4">4-4-4</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="layout"  data-args="4,8">4-8</a>
+                                    </div>
+                                    <div class="col-xs-12 row">
+                                        <div class="col-xs-4"><input type="text" class="form-control" id="layout_args"></div>
+                                        <div class="col-xs-8"><a class="btn-link btn">自定义</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse1_2">
+                                        Form
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1_2" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="form" >form</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="input" >input</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="textarea" >textarea</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="select" >select</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="radio" >radio</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion1" href="#collapse1_3">
+                                        Others
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1_3" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn fn-new-comp" data-type="separator" >分隔线</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn">超链接</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn">按钮</a>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <a class="btn-link btn">图片</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 ly-full">
+            <div class="panel panel-info">
+                <div class="panel-heading">View
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="pc-border" value="dcr-page-creator-hasCompBorder"> 组件边界
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="pc-border" value="dcr-page-creator-hasContBorder"> 容器边界
+                    </label>
+                    <a class="btn-link pull-right fn-preview" >preview <i class="icon-double-angle-right"></i></a></div>
+                <div class="panel-body dcr-page-creator-container" id="view" >
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 ly-full">
+            <div class="ly-full panel panel-info">
+                <div class="panel-heading">Configs</div>
+                <div class="ly-full panel-body">
+                    <form class="form-horizontal" >
+                        <div class="container-fluid">
+                            <h5>通用属性</h5>
+                            <hr/>
+                            <div class="row">
+                                <div class="container-fluid">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3">ID</label>
+                                        <div class="col-sm-8">
+                                            <input tpye="text" class="form-control" id="Comp_Id"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h5>具体属性</h5>
+                            <hr/>
+                            <div class="row" id="config"></div>
+                            <div class="row text-right"><a class="btn btn-primary fn-save">保存</a></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    'use strict'
+    use(['jquery','page-creator','jquery-ui','dialog'],function(m){
+        var $ = m['jquery'];
+        var dialog = m['dialog'];
+        var $view = $("#view");
+        var $config = $("#config");
+        var creator = m['page-creator'].create($view);
+        $(function(){
+            'use strict';
+
+            var sortConfig = {
+                connectWith: ".dcr-page-creator-container",
+                stop: function( event, ui ) {
+//                    var $parent = ui.item.parent();
+//                    var p_key = $parent.attr("key");
+//                    $parent.children().each(function(i,n){
+//                        $(this).attr("key",p_key+"."+i);
+//                    });
+//                    creator.updateKeys($element,$container)
+//                    creator.updateKeys()
+
+//                    $("#config").html(creator.serialize())
+
+                }
+            };
+
+            $("[name=pc-border]").on("change",function(){
+                var $this = $(this);
+                if($this.is(":checked")){
+                    $view.addClass($this.val())
+                }else{
+                    $view.removeClass($this.val())
+                }
+            }).last().trigger("click");
+            var ready = creator.ready(function(elements,view){
+
+                $(document).on("click",".fn-new-comp",function(){
+                    //获得一个既定义布局
+                    var $this = $(this);
+
+                    var args = (($this.data("args")+"")||"").split(",").map(function(n){return n-0});
+
+                    var type = $this.data("type");
+
+                    var v = creator.getElement({
+                        type:type,
+                        args:args
+                    });
+
+                    view.append(v);
+
+                    v.find(".dcr-page-creator-container").sortable(sortConfig).disableSelection();
+                    return false;
+                }).on("click",".fn-preview",function(){
+                    $("#config").html(creator.serialize())
+                }).on("click",".fn-save",function(){
+                    //处理ID
+                    var compId = $("#Comp_Id").val();
+                    var $target = $config.data('target');
+                    var r = creator.register(compId,$target);
+                    if(!r){
+                        dialog.alert("ID不可用，请更换");
+                        return false;
+                    }
+                    //得到配置数据
+                    var json = {};
+                    $("#config").find("[data-name]").each(function(){
+                        var $this = $(this);
+                        json[$this.data("name")] = $this.val();
+                    });
+
+                    var data = $target.data("data");
+                    data.param = json;
+                });
+            });
+            //获取初始化数据
+            var promise = $.ajax({
+                url:"data-config.json",
+                "dataType":"json"
+            });
+            $.when(promise,ready).done(function(config){
+//              creator.init(config[0],"view")
+                creator.init(config[0],"edit")
+                $(".dcr-page-creator-container").sortable(sortConfig).disableSelection();
+
+//                $("#config").html(creator.serialize())
+            });
+
+            $view.on("click",".dcr-page-creator-element",function(){
+                $view.find(".dcr-page-creator-element.active").removeClass("active")
+                var $this = $(this);
+                $this.addClass("active");
+
+                $config.data("target",$this);
+
+                $("#Comp_Id").val($this.data("id"));
+
+                var ele = $this.data("data");
+
+                creator.getFields(ele).done(function(html){
+                    $config.empty().append(html);
+                });
+
+                return false;
+            });
+        });
+    })
+</script>
+</body>
+</html>

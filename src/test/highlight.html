@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html,body{
+            height:100%;
+        }
+        *{
+            font-family: "微软雅黑";
+        }
+
+        table.ui-grid-tree>tbody>tr>td{
+            border-bottom:0;
+            border-top:0;
+        }
+        .ui-tree-icon{
+            margin: 0 8px;
+        }
+    </style>
+    <link rel="stylesheet" href="prism/prism.css">
+    <title>PageCreator Test HighLight</title>
+
+</head>
+<body >
+
+<pre class="container-fluid " id="code" >
+    <code class="language-javascript" contenteditable="true" style="outline: none">
+        var aa = 1
+    </code>
+</pre>
+<script src="../jquery.min.js"></script>
+<script src="prism/prism.js"></script>
+<script>
+$(function(){
+    var codeNode = document.querySelector("#code")
+    var range = document.createRange()
+
+    range.startContainer = codeNode
+    $("#code").on("input",function(e){
+        var selection = document.getSelection();
+        var startAnchor = selection.anchorOffset;
+        var anchorNode = selection.anchorNode
+        var start = new Date()
+        Prism.highlightAll()
+        var end = new Date()
+
+
+        console.log(anchorNode,startAnchor,anchorNode.length)
+
+        range.setStart(selection.anchorNode,selection.anchorOffset);
+        range.setEnd(selection.focusNode,selection.focusOffset);
+
+        console.log(end - start)
+        return false
+    })
+
+})
+</script>
+</body>
+</html>

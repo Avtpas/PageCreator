@@ -1,0 +1,35 @@
+.dcr-page-creator-menu {
+    margin-top:5px;
+    background-color: skyblue;
+}
+
+.dcr-page-creator-element{
+    margin-bottom:5px;
+    margin-top:5px
+}
+
+.dcr-page-creator-hasCompBorder .dcr-page-creator-element{
+    border:1px solid skyblue;
+}
+.dcr-page-creator-element.active{
+    outline:2px solid red;
+}
+
+.dcr-page-creator-container{
+    border-radius:5px;
+    min-height: 50px !important;
+    margin-bottom:15px;
+}
+.dcr-page-creator-hasContBorder .dcr-page-creator-container{
+    border:1px dotted gray;
+}
+
+
+.dcr-page-creator-layout-edit:hover{
+    background-color:gray;
+}
+
+#view{
+    margin-bottom:0 !important;
+}
+

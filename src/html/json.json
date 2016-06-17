@@ -1,0 +1,89 @@
+[
+  {
+    "title": "separator",
+    "type": "separator",
+    "sub": []
+  },
+  {
+    "title": "layout",
+    "type": "layout",
+    "args": [
+      6,
+      6
+    ],
+    "sub": [
+      [
+        {
+          "title": "",
+          "type": "form",
+          "sub": [
+            [
+              {
+                "title": "layout",
+                "type": "layout",
+                "args": [
+                  12
+                ],
+                "sub": [
+                  [
+                    {
+                      "title": "input",
+                      "type": "input",
+                      "sub": []
+                    }
+                  ]
+                ]
+              }
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "title": "",
+          "type": "form",
+          "sub": [
+            [
+              {
+                "title": "layout",
+                "type": "layout",
+                "args": [
+                  12
+                ],
+                "sub": [
+                  [
+                    {
+                      "title": "input",
+                      "type": "input",
+                      "sub": []
+                    },
+                    {
+                      "title": "separator",
+                      "type": "separator",
+                      "sub": []
+                    },
+                    {
+                      "title": "input",
+                      "type": "input",
+                      "sub": []
+                    },
+                    {
+                      "title": "separator",
+                      "type": "separator",
+                      "sub": []
+                    },
+                    {
+                      "title": "input",
+                      "type": "input",
+                      "sub": []
+                    }
+                  ]
+                ]
+              }
+            ]
+          ]
+        }
+      ]
+    ]
+  }
+]
