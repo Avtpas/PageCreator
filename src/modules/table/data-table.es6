@@ -38,7 +38,7 @@ module.exports = {
 
         options.canSelect = options.canSelect == null ? "0" : "1";
 
-        _columns = Base64.encode(JSON.stringifyFix(options.columns))
+        let _columns = Base64.encode(JSON.stringifyFix(options.columns))
 
         _columns = typeof options.columns === "string" ? options.columns : _columns;
 
