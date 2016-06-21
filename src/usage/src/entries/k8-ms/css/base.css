@@ -1,0 +1,144 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei"; }
+
+/** 清除内外边距 **/
+body,
+h1, h2, h3, h4, h5, h6,
+hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre, form, fieldset, legend, button, input, textarea,
+th, td {
+  margin: 0;
+  padding: 0;
+  border: medium none; }
+
+/** 设置默认字体 **/
+address, cite, dfn, em, var, i {
+  font-style: normal; }
+
+/* 将斜体扶正 */
+code, kbd, pre, samp {
+  font-family: courier new, courier, monospace; }
+
+/* 统一等宽字体 */
+body, p, input, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, b, form {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: middle;
+  font-weight: normal; }
+
+img {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+header, section, footer {
+  display: block;
+  margin: 0;
+  padding: 0; }
+
+/** 重置表单元素 **/
+fieldset, img {
+  border: 0;
+  vertical-align: middle; }
+
+/* img 搭车：让链接里的 img 无边框 */
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  outline: 0; }
+
+button {
+  -webkit-appearance: none;
+  border: 0;
+  background: 0 0; }
+
+/** 重置表格元素 **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* 清除浮动 */
+.ks-clear:after, .clear:after {
+  content: '\20';
+  display: block;
+  height: 0;
+  clear: both; }
+
+.ks-clear, .clear {
+  *zoom: 1; }
+
+/* 文字截断 */
+.nowrap {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+
+.nowrap-flex {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  -webkit-box-flex: 1;
+  height: inherit; }
+
+.nowrap-multi {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; }
+
+.placehold-wrap {
+  padding-top: 31.25%;
+  position: relative; }
+
+.placehold {
+  color: #bbb;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-sizing: border-box;
+  text-align: center;
+  height: 100%;
+  z-index: -1; }
+
+.placehold-img {
+  padding-top: 31.25%;
+  position: relative; }
+
+.placehold-img > span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover; }
+
+.placehold-img img {
+  width: 100%;
+  height: 100%; }
+
+.hide {
+  display: none; }
+.show{
+  display: block;
+}
+
+/*# sourceMappingURL=maps/base.css.map */

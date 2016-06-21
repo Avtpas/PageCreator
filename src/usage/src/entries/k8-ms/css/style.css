@@ -1,0 +1,99 @@
+
+body {
+  background-color: white; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+aside {
+  overflow: hidden;
+  outline: none; }
+
+.left-panel {
+  background-color: #2f353f;
+  box-shadow: 7px 60px 12px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+.logo {
+  text-align: center;
+  background-color: #fff;
+  padding: 13px 10px;
+  width: 250px;
+  height: 50px; }
+
+.navigation > ul > li {
+  position: relative;
+  line-height: 1.5; }
+  .navigation > ul > li > a {
+    color: #838F9A;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 12px 25px;
+    display: block; }
+    .navigation > ul > li > a:hover {
+      color: #fff;
+      background: #2A303A; }
+    .navigation > ul > li > a i {
+      margin-right: 6px;
+      font-size: 18px;
+      width: 25px;
+      float: left; }
+  .navigation > ul > li > ul {
+    display: none;
+    background: #272c35;
+    padding-bottom: 10px; }
+    .navigation > ul > li > ul > li > a {
+      padding: 8px 25px 8px 55px;
+      color: #838F9A;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      font-size: 14px;
+      text-align: left;
+      display: block; }
+      .navigation > ul > li > ul > li > a:hover {
+        color: #eee; }
+.navigation > ul > li.active > a {
+  color: #fff;
+  background: #2A303A; }
+
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 6px;
+  font-size: 12px !important;
+  font-weight: normal;
+  color: #fff;
+  line-height: 1;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #777;
+  border-color: #777;
+  border-radius: 12px; }
+
+.content {
+  margin-left: 250px; }
+
+header {
+  background-color: #fff;
+  box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
+  height: 50px; }
+  header:before {
+    display: table;
+    content: " "; }
+
+.wraper {
+  padding-top: 20px;
+  min-height: 550px;
+  padding-bottom: 70px; }
+
