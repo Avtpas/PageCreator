@@ -2,8 +2,8 @@ var jsbeautify = require('js-beautify');
 class Compiler {
     constructor(creator) {
         this.creator = creator
-        let API = "1"
-        console.log(API)
+        //let API = "1"
+        //console.log(API)
     }
     compile() {
         var html = this.renderHTML();
