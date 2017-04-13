@@ -31,7 +31,6 @@ module.exports = {
     	//new ExtractTextPlugin("style.[contenthash:9].css"),//发布时打开
 		new ExtractTextPlugin("style.css")
 		//,new HtmlWebpackPlugin({
-		//	title:"点呀点App3.6话题系统",
 		//	template:"./app/index.html"
 		//	//path:__dirname+'/dist/'
 		//})
